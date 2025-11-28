@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>La Mesa Eco Park — Recreation Planner</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --accent:#00a8a8;
+  --accent2:#ff7a00;
+  --bg:#eef2f7;
+  --card:#ffffff;
+  --shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+*{box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{margin:0;background:linear-gradient(135deg,#cce7ff,#f7e5ff,#ffe6d1);color:#111;line-height:1.6;}
+
+.hero{
+  background:url('https://images.unsplash.com/photo-1533632359935-2750ea2706d8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  padding:80px 20px;
+  color:white;
+  text-align:center;
+  position:relative;
+}
+.hero::after{
+  content:"";
+  position:absolute;inset:0;
+  background:rgba(0,0,0,0.35);
+}
+.hero > div{position:relative;z-index:2;}
+.hero h1{font-size:42px;margin:0;font-weight:700;}
+.hero p{font-size:18px;margin-top:10px;}
+
+.container{max-width:1000px;margin:20px auto;padding:20px;}
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:16px;
+  margin:20px 0;
+  box-shadow:var(--shadow);
+}
+
+h2{margin-top:0;font-size:28px;}
+
+.quick-info{padding-left:18px;}
+
+.activity-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:16px;
+}
+.activity-grid article{
+  background:#fafafa;
+  border-radius:12px;
+  padding:14px;
+  border:1px solid #ddd;
+  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+}
+.activity-grid img{
+  width:100%;height:150px;object-fit:cover;border-radius:10px;
+}
+
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  background:var(--accent);
+  color:white;
+  border-radius:10px;
+  border:none;
+  text-decoration:none;
+  cursor:pointer;
+  margin-top:10px;
+  font-weight:600;
+}
+
+.planner-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;
+}
+
+input,select{
+  width:100%;
+  padding:8px;
+  margin:6px 0 12px 0;
+  border-radius:8px;
+  border:1px solid #bbb;
+}
+
+.suggestions{
+  background:#f8f8f8;
+  padding:10px;
+  border-radius:8px;
+  border:1px dashed #ccc;
+  min-height:40px;
+}
+
+.check-items label{display:block;margin:6px 0;}
+
+footer{
+  text-align:center;
+  padding:20px;
+  color:#444;
+}
+
+/* Added design-only styling */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    transition: 0.25s ease;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.activity-grid article:hover {
+    transform: scale(1.03);
+    transition: 0.2s ease;
+    background: #ffffff;
+}
+
+.btn:hover {
+    background: var(--accent2);
+}
+
+
+.pack-item{display:flex;align-items:center;gap:8px;margin:6px 0;}
+.pack-item input{width:auto;margin:0;}
+
+</style>
+</head>
+
+<body>
+
+<div class="top-banner">
+  <img src="ecopark.jpg" style="width:100%;height:260px;object-fit:cover;">
+</div>
+
+
+<section class="hero">
+  <div>
+    <h1>La Mesa Eco Park</h1>
+    <p>Your complete outdoor recreation planner</p>
+  </div>
+</section>
+
+<main class="container">
+
+  <section class="card">
+    <h2>About La Mesa Eco Park</h2>
+    <img src="ecopark2.jpg" style="width:100%;border-radius:14px;margin-bottom:16px;">
+    <p>La Mesa Eco Park is a relaxing outdoor destination in Quezon City, a hot spot great for hiking, picnics, photography, workouts, nature bonding, and family activities.</p>
+    <ul class="quick-info">
+      <li><strong>Opening Hours:</strong> 6:00 AM – 6:00 PM</li>
+      <li><strong>Entrance Fee:</strong> ₱50 - ₱100</li>
+      <li><strong>Location:</strong> La Mesa, Quezon City</li>
+    </ul>
+    <a class="btn" href="https://www.google.com/maps/search/La+Mesa+Eco+Park" target="_blank">Open in Google Maps</a>
+  </section>
+
+  <section class="card">
+    <h2>Activities</h2>
+    <div class="activity-grid">
+      <article>
+        <img src="picnic.jpg">
+        <h3>Picnic</h3><p>Relax under trees and enjoy meals with family or friends.</p>
+      </article>
+      <article>
+        <img src="hiking.jpg">
+        <h3>Trail Walk</h3><p>Walk or hike through forest paths and scenic views.</p>
+      </article>
+      <article>
+        <img src="workout.jpg">
+        <h3>Workout</h3><p>Do zumba, jogging, stretching, and bike outdoors.</p>
+      </article>
+      <article>
+        <img src="photo.jpg">
+        <h3>Photography</h3><p>Capture nature, wildlife, and scenic landscapes.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Plan Your Trip</h2>
+
+    <div class="planner-grid">
+
+      <div>
+        <h3>Group Planner</h3>
+        <label>People:
+          <input id="people" type="number" value="4">
+        </label>
+
+        <label>Activity:
+          <select id="activity">
+            <option value="picnic">Picnic</option>
+            <option value="hike">Hike</option>
+            <option value="workout">Workout</option>
+            <option value="photo">Photography</option>
+          </select>
+        </label>
+
+        <button id="suggestBtn" class="btn">Get Suggestions</button>
+        <div id="suggestions" class="suggestions"></div>
+      </div>
+
+      <div>
+        <h3>Cost Estimator</h3>
+        <label>Entrance Fee (₱)
+          <input id="fee" type="number" value="75">
+        </label>
+
+        <label>Food per Person (₱)
+          <input id="food" type="number" value="150">
+        </label>
+
+        <button id="estimateBtn" class="btn">Estimate Total</button>
+        <div id="estimateResult" class="suggestions"></div>
+      </div>
+
+      <div>
+        <h3>Packing Checklist</h3>
+        <div class="pack-item"><input type="checkbox" class="pack" value="Water"><span>Water</span></div>
+        <div class="pack-item"><input type="checkbox" class="pack" value="Sunscreen"><span>Sunscreen</span></div>
+        <div class="pack-item"><input type="checkbox" class="pack" value="Snacks"><span>Snacks</span></div>
+        <div class="pack-item"><input type="checkbox" class="pack" value="Camera"><span>Camera</span></div>
+
+        <button id="copyChecklist" class="btn">Copy Checklist</button>
+        <p id="copyMsg" style="color:var(--accent2);font-weight:600;"></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Save Your Plan</h2>
+    <button id="savePlan" class="btn">Download (.json)</button>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Recreation Planner — La Mesa Eco Park</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', ()=>{
+
+  const people=document.getElementById('people');
+  const activity=document.getElementById('activity');
+  const suggestions=document.getElementById('suggestions');
+  const estimateResult=document.getElementById('estimateResult');
+  const copyMsg=document.getElementById('copyMsg');
+
+  document.getElementById('suggestBtn').onclick=()=>{
+    const p=Number(people.value)||1;
+    let act=activity.value;
+    let t='';
+    if(act==='picnic') t=`For ${p} people: Bring mat, snacks, card games, drinks.`;
+    if(act==='hike') t=`For ${p} people: Wear shoes and bring at least 1L water each.`;
+    if(act==='workout') t=`For ${p} people: Bring mats, towel, and timer.`;
+    if(act==='photo') t=`For ${p} people: Bring tripod, extra batteries.`;
+    suggestions.textContent=t;
+  };
+
+  document.getElementById('estimateBtn').onclick=()=>{
+    const total=(Number(people.value)||1)*((Number(fee.value)||0)+(Number(food.value)||0));
+    estimateResult.innerHTML=`<strong>Total Cost: ₱${total}</strong>`;
+  };
+
+  document.getElementById('copyChecklist').onclick=()=>{
+    const items=[...document.querySelectorAll('.pack:checked')].map(i=>"- "+i.value);
+    const text=items.join("\n") || "No items selected";
+    navigator.clipboard.writeText(text);
+    copyMsg.textContent="Checklist Copied!";
+    setTimeout(()=>copyMsg.textContent="",2000);
+  };
+
+  document.getElementById('savePlan').onclick=()=>{
+    const plan={
+      people:Number(people.value)||1,
+      activity:activity.value,
+      fee:Number(fee.value)||0,
+      food:Number(food.value)||0,
+      checklist:[...document.querySelectorAll('.pack:checked')].map(i=>i.value)
+    };
+    const blob=new Blob([JSON.stringify(plan,null,2)],{type:"application/json"});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement("a");
+    a.href=url;a.download="plan.json";a.click();
+    URL.revokeObjectURL(url);
+  };
+
+});
+</script>
+
+</body>
+</html>
